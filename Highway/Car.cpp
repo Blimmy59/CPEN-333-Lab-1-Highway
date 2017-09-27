@@ -19,7 +19,7 @@ void Car::accelerate(bool on) {
 }
 
 State Car::getState() {
-	return carState;
+	return Car::carState;
 }
 
 void Car::drive(double dt) {
@@ -30,4 +30,3 @@ void Car::drive(double dt) {
 	carState.position = physics::compute_position(carState.position, carState.velocity, dt);
 	carState.time += dt;
 }
-

@@ -21,7 +21,7 @@ public:
 	void accelerate(bool on);
 	virtual void drive(double dt);
 	State getState();
-
+	//State carState;
 private:
 	std::string model;
 	double mass;
@@ -43,13 +43,14 @@ public:
 	Mazda3() : Car("Mazda 3", 1400, 800, 0.6){}
 };
 class Tesla : public Car {
+public:
 	//constructor
 	Tesla() : Car("Tesla", 2000, 1500, 0.3){}
 };
 class Herbie : public Car {
+public:
 	//constructor
 	Herbie() : Car("Herbie", 0 , 0, 0){}
-public:
 	void drive(double dt) {
 		carState.position = 1 + carState.position * carState.position;
 	}
